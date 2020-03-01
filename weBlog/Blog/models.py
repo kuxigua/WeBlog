@@ -35,6 +35,7 @@ class Article(models.Model):  # 文章
     pub_time = models.DateField('日期', auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.SET_DEFAULT, default=1, verbose_name='类别')
     tag = models.ManyToManyField(Tag, verbose_name='标签')
+    img_id = models.CharField("图片id", max_length=50, default='')
 
     class Meta:
         # managed = False

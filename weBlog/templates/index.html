@@ -10,12 +10,11 @@
 	<!-- styles -->
 	
     <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<!--    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">-->
     <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="../static/css/style.css">
 	<link rel="stylesheet" href="../static/css/menu.min.css">
-	
-	
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -55,7 +54,7 @@
 			</li>
 		</ul>
 	</nav><!-- /nav -->
-	
+
 	<!-- /////////////////////////////////////////Header -->
 	<div class="top-header">
 		<div class="container">
@@ -89,232 +88,238 @@
 				  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
 				  <path d="m 1925,0 0,150 -1925,0"></path>
 			</svg>
-		</div>		
+		</div>
 	</header><!-- #masthead -->
 	<!-- Header -->
-	
-	
+
+
 	<!-- /////////////////////////////////////////Content -->
 	<div id="page-content" class="index-page">
-		
+
 		<!-- ////////////Content Box 01 -->
 		<section class="box-content box-5 box-style-3" id="nav-blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="box-item">
-							<div class="svg-container post-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">
-								  <g transform="translate(0,-902.36218)"></g>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="M 0,150 0,0 1925,0"></path>
-								</svg>
+					<div class="container">
+					{% for item in article %}
+						<div class="col-md-4">
+								<div class="box-item">
+									<div class="svg-container post-svg svg-block">
+										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">
+										  <g transform="translate(0,-902.36218)"></g>
+										  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+										  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+										  <path d="M 0,150 0,0 1925,0"></path>
+										</svg>
+									</div>
+									<div class="entry-thumb">
+										<img class="img-responsive" src="../static/images/{{ item.img_id }}.jpg">
+										<a class="thumb-link" href="/detail/?article_id={{item.id}}"><i class="fa fa-link"></i></a>
+									</div>
+									<div class="content">
+										<h3 class="entry-title">
+											<a href="/detail/?article_id={{item.id}}">{{ item.title }}</a>
+										</h3>
+										<p>1234567765432</p>
+										<span>{{ item.pub_time }}</span><br>
+									</div>
+									<div class="read-more">
+										<a href="/detail/?article_id={{item.id}}">Continue reading …</a>
+									</div>
+									<div class="svg-container post-bottom-svg svg-block">
+										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
+											<g transform="translate(0,-902.36218)"></g>
+											  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+											  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+											  <path d="m 1925,0 0,150 -1925,0"></path>
+										</svg>
+									</div>
+								</div>
 							</div>
-							<div class="entry-thumb">
-								<img class="img-responsive" src="../static/images/1.jpg">
-								<a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>		
-							</div>
-							<div class="content">
-								<h3 class="entry-title">
-									<a href="single.html">Eget Metus Nec Leo</a>
-								</h3>
-								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
-								<span>MAY 21, 2016 BY KOMPLEET</span><br>
-							</div>
-							<div class="read-more">
-								<a href="single.html">Continue reading …</a>
-							</div>
-							<div class="svg-container post-bottom-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
-									<g transform="translate(0,-902.36218)"></g>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 1925,0 0,150 -1925,0"></path>
-								</svg>
-							</div>	
+						{% if forloop.counter|divisibleby:3 %}
 						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<div class="svg-container post-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">
-								  <g transform="translate(0,-902.36218)"></g>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="M 0,150 0,0 1925,0"></path>
-								</svg>
-							</div>
-							<div class="entry-thumb">
-								<img class="img-responsive" src="../static/images/3.jpg">
-								<a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>		
-							</div>
-							<div class="content">
-								<h3 class="entry-title">
-									<a href="single.html">Donec In Massa Libero</a>
-								</h3>
-								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
-								<span>MAY 21, 2016 BY KOMPLEET</span><br>
-								<a class="btn btn-1" href="single.html">Read More</a>
-							</div>
-							<div class="read-more">
-								<a href="single.html">Continue reading …</a>
-							</div>
-							<div class="svg-container post-bottom-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
-									<g transform="translate(0,-902.36218)"></g>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 1925,0 0,150 -1925,0"></path>
-								</svg>
-							</div>
-						</div>
-						
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<div class="svg-container post-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">
-								  <g transform="translate(0,-902.36218)"></g>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="M 0,150 0,0 1925,0"></path>
-								</svg>
-							</div>
-							<div class="entry-thumb">
-								<img class="img-responsive" src="../static/images/5.jpg">
-								<a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>		
-							</div>
-							<div class="content">
-								<h3 class="entry-title">
-								<a href="single.html">Class Aptent Taciti Urna Bibendum Id</a>
-								</h3>
-								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
-								<span>MAY 21, 2016 BY KOMPLEET</span><br>
-								<a class="btn btn-1" href="single.html">Read More</a>
-							</div>
-							<div class="read-more">
-								<a href="single.html">Continue reading …</a>
-							</div>
-							<div class="svg-container post-bottom-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
-									<g transform="translate(0,-902.36218)"></g>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 1925,0 0,150 -1925,0"></path>
-								</svg>
-							</div>
-						</div>
-						
-					</div>
-				</div><div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="box-item">
-							<div class="svg-container post-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">
-								  <g transform="translate(0,-902.36218)"></g>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="M 0,150 0,0 1925,0"></path>
-								</svg>
-							</div>
-							<div class="entry-thumb">
-								<img class="img-responsive" src="../static/images/2.jpg">
-								<a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>		
-							</div>
-							<div class="content">
-								<h3 class="entry-title">
-									<a href="single.html">Aliquam sed Placerat Non</a>
-								</h3>
-								<p>Suspendisse porttitor. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis, viverra feugiat ipsum volutpat vitae. Fusce justo turpis, sodales sed placerat non, suscipit at diam.</p>
-								<span>MAY 21, 2016 BY KOMPLEET</span><br>
-								<a class="btn btn-1" href="single.html">Read More</a>
-							</div>
-							<div class="read-more">
-								<a href="single.html">Continue reading …</a>
-							</div>
-							<div class="svg-container post-bottom-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
-									<g transform="translate(0,-902.36218)"></g>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 1925,0 0,150 -1925,0"></path>
-								</svg>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<div class="svg-container post-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">
-								  <g transform="translate(0,-902.36218)"></g>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="M 0,150 0,0 1925,0"></path>
-								</svg>
-							</div>
-							<div class="entry-thumb">
-								<img class="img-responsive" src="../static/images/4.jpg">
-								<a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>		
-							</div>
-							<div class="content">
-								<h3 class="entry-title">
-									<a href="single.html">Tristique Et Vonvallis Commodo</a>
-								</h3>
-								<p>Class aptent taciti urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>
-								<span>MAY 21, 2016 BY KOMPLEET</span><br>
-								<a class="btn btn-1" href="single.html">Read More</a>
-							</div>
-							<div class="read-more">
-								<a href="single.html">Continue reading …</a>
-							</div>
-							<div class="svg-container post-bottom-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
-									<g transform="translate(0,-902.36218)"></g>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 1925,0 0,150 -1925,0"></path>
-								</svg>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<div class="svg-container post-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">
-								  <g transform="translate(0,-902.36218)"></g>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-								  <path d="M 0,150 0,0 1925,0"></path>
-								</svg>
-							</div>
-							<div class="entry-thumb">
-								<img class="img-responsive" src="../static/images/6.jpg">
-								<a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>		
-							</div>
-							<div class="content">
-								<h3 class="entry-title">
-									<a href="single.html">Proin Nisi Luctus To Taciti</a>
-								</h3>
-								<p>Proin lobortis mattis odio non ornare. Sed tempor nisi eu hendrerit luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostravelit id sem tincidunt convallis ac eget quam. Vestibulum posuere porttitor sapien .</p>
-								<span>MAY 21, 2016 BY KOMPLEET</span><br>
-								<a class="btn btn-1" href="single.html">Read More</a>
-							</div>
-							<div class="read-more">
-								<a href="single.html">Continue reading …</a>
-							</div>
-							<div class="svg-container post-bottom-svg svg-block">
-								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
-									<g transform="translate(0,-902.36218)"></g>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
-									  <path d="m 1925,0 0,150 -1925,0"></path>
-								</svg>
-							</div>
-						</div>
-					</div>
-				</div>
+						<div class="container">
+						{% endif %}
+					{% endfor %}
+
+<!--					<div class="col-md-4">-->
+<!--						<div class="box-item">-->
+<!--							<div class="svg-container post-svg svg-block">-->
+<!--								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">-->
+<!--								  <g transform="translate(0,-902.36218)"></g>-->
+<!--								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--								  <path d="M 0,150 0,0 1925,0"></path>-->
+<!--								</svg>-->
+<!--							</div>-->
+<!--							<div class="entry-thumb">-->
+<!--								<img class="img-responsive" src="../static/images/3.jpg">-->
+<!--								<a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>-->
+<!--							</div>-->
+<!--							<div class="content">-->
+<!--								<h3 class="entry-title">-->
+<!--									<a href="single.html">Donec In Massa Libero</a>-->
+<!--								</h3>-->
+<!--								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>-->
+<!--								<span>MAY 21, 2016 BY KOMPLEET</span><br>-->
+<!--								<a class="btn btn-1" href="single.html">Read More</a>-->
+<!--							</div>-->
+<!--							<div class="read-more">-->
+<!--								<a href="single.html">Continue reading …</a>-->
+<!--							</div>-->
+<!--							<div class="svg-container post-bottom-svg svg-block">-->
+<!--								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">-->
+<!--									<g transform="translate(0,-902.36218)"></g>-->
+<!--									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--									  <path d="m 1925,0 0,150 -1925,0"></path>-->
+<!--								</svg>-->
+<!--							</div>-->
+<!--						</div>-->
+
+<!--					</div>-->
+<!--					<div class="col-md-4">-->
+<!--						<div class="box-item">-->
+<!--							<div class="svg-container post-svg svg-block">-->
+<!--								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">-->
+<!--								  <g transform="translate(0,-902.36218)"></g>-->
+<!--								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--								  <path d="M 0,150 0,0 1925,0"></path>-->
+<!--								</svg>-->
+<!--							</div>-->
+<!--							<div class="entry-thumb">-->
+<!--								<img class="img-responsive" src="../static/images/5.jpg">-->
+<!--								<a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>-->
+<!--							</div>-->
+<!--							<div class="content">-->
+<!--								<h3 class="entry-title">-->
+<!--								<a href="single.html">Class Aptent Taciti Urna Bibendum Id</a>-->
+<!--								</h3>-->
+<!--								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>-->
+<!--								<span>MAY 21, 2016 BY KOMPLEET</span><br>-->
+<!--								<a class="btn btn-1" href="single.html">Read More</a>-->
+<!--							</div>-->
+<!--							<div class="read-more">-->
+<!--								<a href="single.html">Continue reading …</a>-->
+<!--							</div>-->
+<!--							<div class="svg-container post-bottom-svg svg-block">-->
+<!--								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">-->
+<!--									<g transform="translate(0,-902.36218)"></g>-->
+<!--									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--									  <path d="m 1925,0 0,150 -1925,0"></path>-->
+<!--								</svg>-->
+<!--							</div>-->
+<!--						</div>-->
+
+<!--					</div>-->
+				<div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+<!--				<div class="row">-->
+<!--					<div class="col-md-4">-->
+<!--						<div class="box-item">-->
+<!--							<div class="svg-container post-svg svg-block">-->
+<!--								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">-->
+<!--								  <g transform="translate(0,-902.36218)"></g>-->
+<!--								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--								  <path d="M 0,150 0,0 1925,0"></path>-->
+<!--								</svg>-->
+<!--							</div>-->
+<!--							<div class="entry-thumb">-->
+<!--								<img class="img-responsive" src="../static/images/2.jpg">-->
+<!--								<a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>-->
+<!--							</div>-->
+<!--							<div class="content">-->
+<!--								<h3 class="entry-title">-->
+<!--									<a href="single.html">Aliquam sed Placerat Non</a>-->
+<!--								</h3>-->
+<!--								<p>Suspendisse porttitor. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis, viverra feugiat ipsum volutpat vitae. Fusce justo turpis, sodales sed placerat non, suscipit at diam.</p>-->
+<!--								<span>MAY 21, 2016 BY KOMPLEET</span><br>-->
+<!--								<a class="btn btn-1" href="single.html">Read More</a>-->
+<!--							</div>-->
+<!--							<div class="read-more">-->
+<!--								<a href="single.html">Continue reading …</a>-->
+<!--							</div>-->
+<!--							<div class="svg-container post-bottom-svg svg-block">-->
+<!--								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">-->
+<!--									<g transform="translate(0,-902.36218)"></g>-->
+<!--									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--									  <path d="m 1925,0 0,150 -1925,0"></path>-->
+<!--								</svg>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-md-4">-->
+<!--						<div class="box-item">-->
+<!--							<div class="svg-container post-svg svg-block">-->
+<!--								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">-->
+<!--								  <g transform="translate(0,-902.36218)"></g>-->
+<!--								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--								  <path d="M 0,150 0,0 1925,0"></path>-->
+<!--								</svg>-->
+<!--							</div>-->
+<!--							<div class="entry-thumb">-->
+<!--								<img class="img-responsive" src="../static/images/4.jpg">-->
+<!--								<a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>-->
+<!--							</div>-->
+<!--							<div class="content">-->
+<!--								<h3 class="entry-title">-->
+<!--									<a href="single.html">Tristique Et Vonvallis Commodo</a>-->
+<!--								</h3>-->
+<!--								<p>Class aptent taciti urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>-->
+<!--								<span>MAY 21, 2016 BY KOMPLEET</span><br>-->
+<!--								<a class="btn btn-1" href="single.html">Read More</a>-->
+<!--							</div>-->
+<!--							<div class="read-more">-->
+<!--								<a href="single.html">Continue reading …</a>-->
+<!--							</div>-->
+<!--							<div class="svg-container post-bottom-svg svg-block">-->
+<!--								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">-->
+<!--									<g transform="translate(0,-902.36218)"></g>-->
+<!--									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--									  <path d="m 1925,0 0,150 -1925,0"></path>-->
+<!--								</svg>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-md-4">-->
+<!--						<div class="box-item">-->
+<!--							<div class="svg-container post-svg svg-block">-->
+<!--								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">-->
+<!--								  <g transform="translate(0,-902.36218)"></g>-->
+<!--								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--								  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--								  <path d="M 0,150 0,0 1925,0"></path>-->
+<!--								</svg>-->
+<!--							</div>-->
+<!--							<div class="entry-thumb">-->
+<!--								<img class="img-responsive" src="../static/images/6.jpg">-->
+<!--								<a class="thumb-link" href="single.html"><i class="fa fa-link"></i></a>		-->
+<!--							</div>-->
+<!--							<div class="content">-->
+<!--								<h3 class="entry-title">-->
+<!--									<a href="single.html">Proin Nisi Luctus To Taciti</a>-->
+<!--								</h3>-->
+<!--								<p>Proin lobortis mattis odio non ornare. Sed tempor nisi eu hendrerit luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostravelit id sem tincidunt convallis ac eget quam. Vestibulum posuere porttitor sapien .</p>-->
+<!--								<span>MAY 21, 2016 BY KOMPLEET</span><br>-->
+<!--								<a class="btn btn-1" href="single.html">Read More</a>-->
+<!--							</div>-->
+<!--							<div class="read-more">-->
+<!--								<a href="single.html">Continue reading …</a>-->
+<!--							</div>-->
+<!--							<div class="svg-container post-bottom-svg svg-block">-->
+<!--								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">-->
+<!--									<g transform="translate(0,-902.36218)"></g>-->
+<!--									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--									  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>-->
+<!--									  <path d="m 1925,0 0,150 -1925,0"></path>-->
+<!--								</svg>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
 			</div>
 		</section>
 		
